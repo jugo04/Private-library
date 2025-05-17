@@ -12,7 +12,7 @@ class BooksManager:
                 return book
         return None
 
-    def find_for_author(self, author):
+    def find_by_author(self, author):
         find_books = []
         for book in self.storage:
             if book.author.lower() == author.lower():

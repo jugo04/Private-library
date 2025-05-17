@@ -105,7 +105,7 @@ def add_book():
         else:
             break
 
-def find_book_for_name():
+def find_book_by_name():
     search = input("Назва книги: ")
     found = manager.find_book(search)
     if found:
@@ -115,9 +115,9 @@ def find_book_for_name():
     else:
         print("Книгу не знайдено")
 
-def find_books_for_author():
+def find_books_by_author():
     search = input("Ім'я автора: ")
-    found = manager.find_for_author(search)
+    found = manager.find_by_author(search)
     if found:
         print("Книги автора в бібліотеці:")
         for book in found:
@@ -129,9 +129,9 @@ def find():
     while True:
         selected = select(find_menu)
         if selected == 1:
-            find_book_for_name()
+            find_book_by_name()
         elif selected == 2:
-            find_books_for_author()
+            find_books_by_author()
         else:
             break
 
@@ -147,6 +147,3 @@ while True:
     elif command == 4:
         print("Роботу завершено")
         break
-
-    #Потрібно додати пошук книги за автором
-    # Можливість створення оцінки враження від книги
