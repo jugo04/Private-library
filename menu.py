@@ -32,6 +32,12 @@ continue_menu = {
     2: "До головного меню"
 }
 
+find_menu = {
+    1: "Пошку за назвою",
+    2: "Пошук за автором"
+}
+
+
 def select(menu):
     for num, action in menu.items():
         print(num, action)
@@ -99,7 +105,7 @@ def add_book():
         else:
             break
 
-def find():
+def find_book_for_name():
     search = input("Назва книги: ")
     found = manager.find_book(search)
     if found:
@@ -108,6 +114,26 @@ def find():
         manage(found)
     else:
         print("Книгу не знайдено")
+
+def find_books_for_author():
+    search = input("Ім'я автора: ")
+    found = manager.find_for_author(search)
+    if found:
+        print("Книги автора в бібліотеці:")
+        for book in found:
+            manager.show_book(book.book_name)
+    else:
+        print("Автора не знайдено")
+
+def find():
+    while True:
+        selected = select(find_menu)
+        if selected == 1:
+            find_book_for_name()
+        elif selected == 2:
+            find_books_for_author()
+        else:
+            break
 
 while True:
     print("Головне меню:")
@@ -122,6 +148,5 @@ while True:
         print("Роботу завершено")
         break
 
-#Функція для пошуку
-#Функція для редагування
-#Цикл
+    #Потрібно додати пошук книги за автором
+    # Можливість створення оцінки враження від книги

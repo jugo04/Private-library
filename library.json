@@ -1,1 +1,20 @@
-[]
+[
+  {
+    "book_name": "книга 1",
+    "author": "Богдан",
+    "released": 2025,
+    "status": "Прочитано"
+  },
+  {
+    "book_name": "Книга 2",
+    "author": "Богдан",
+    "released": 2024,
+    "status": "Почато"
+  },
+  {
+    "book_name": "Книга 3",
+    "author": "Лєра",
+    "released": 2023,
+    "status": "Прочитано"
+  }
+]

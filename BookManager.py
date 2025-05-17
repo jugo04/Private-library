@@ -12,6 +12,13 @@ class BooksManager:
                 return book
         return None
 
+    def find_for_author(self, author):
+        find_books = []
+        for book in self.storage:
+            if book.author.lower() == author.lower():
+                find_books.append(book)
+        return find_books
+
     def create_book(self, name, author, released, status):
         new_book = Book(name, author, released, status)
         self.storage.append(new_book)
